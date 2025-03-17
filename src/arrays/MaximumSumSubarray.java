@@ -1,7 +1,5 @@
 package arrays;
 
-import java.util.ArrayList;
-
 import static java.lang.Math.max;
 
 /**
@@ -47,19 +45,15 @@ public class MaximumSumSubarray {
      * @return The maximum sum of a contiguous subarray.
      */
     private static int maximumSum(int[] arr, int n) {
-        // Initialize variables
         int currentMax = arr[0];
         int maximum = arr[0];
 
-        // Iterate through the array
         for (int i = 1; i < n; i++) {
-            // Update currentMax
             currentMax = max(arr[i], currentMax + arr[i]);
             // Update maximum
             maximum = max(maximum, currentMax);
         }
 
-        // Return the maximum sum
         return maximum;
     }
 }
