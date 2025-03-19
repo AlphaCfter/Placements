@@ -11,6 +11,8 @@ out/
 .settings
 .springBeans
 .sts4-cache
+.exe
+
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
@@ -28,3 +30,4 @@ bin/
 ### Mac OS ###
 .DS_Store
 /out
+

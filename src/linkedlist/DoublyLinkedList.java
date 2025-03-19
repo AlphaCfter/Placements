@@ -14,7 +14,7 @@ public class DoublyLinkedList {
 
     Node head = null;
 
-    public void addNode(String data) {
+    private void addNode(String data) {
         Node newNode = new Node(data);
 
         if (head == null) {
@@ -29,7 +29,17 @@ public class DoublyLinkedList {
         }
     }
 
-    public void display() {
+    private void rotateByN(int n){
+        Node temp = head;
+        while(temp.next != null){
+            temp = temp.next;
+        }
+        temp.next = head;
+        head.prev = temp;
+
+    }
+
+    private void display() {
         Node current = head;
         if (head == null) {
             System.out.println("List is empty");
